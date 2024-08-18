@@ -1,8 +1,10 @@
-# React + Vite
+## Masterji.co Assigment
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Converted these figma design to react web app.
 
-Currently, two official plugins are available:
+[Figma Designs](https://www.figma.com/design/lZnq8DrxXMN6hdRIUHjKdc/MasterJi-Assignment-2-(React.js)?node-id=25-6&t=sHvmSoG67jn4ZlZS-0)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Info :
+Starting Date: 11 August 2024
+Submission Date: 16 August 2024
+My Completion Date: ***(I'm late!)***
