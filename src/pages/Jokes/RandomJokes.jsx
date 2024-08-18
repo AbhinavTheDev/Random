@@ -236,7 +236,7 @@ export default function RandomJokes() {
             </div>
           </div>
           <hr />
-          <div id="footerContainer">
+          <div id="Container2">
             <div id="footer">&copy; chai aur code</div>
           </div>
         </div>

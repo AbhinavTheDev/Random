@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from "react";
-import "./RandomUser.css";
+import styles from './RandomUser.module.css';
 
 const CountryFlag = ({ countryCode }) => {
   const flagUrl = `https://flagcdn.com/w320/${countryCode.toLowerCase()}.png`;
@@ -82,10 +82,10 @@ const callURL = "tel:";
 const callLink = `${callURL}${setCell}`;
     return (
         <>
-        <div className="container">
-        <div className="card">
-          <div className="header">
-            <div className="arrow">
+        <div className={styles.container}>
+        <div className={styles.card}>
+          <div className={styles.header}>
+            <div className={styles.arrow}>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
@@ -103,7 +103,7 @@ const callLink = `${callURL}${setCell}`;
                 <path d="M5 12l6 -6" />
               </svg>
             </div>
-            <div className="title">Profile Overview</div>
+            <div className={styles.title}>Profile Overview</div>
             <div 
             onClick={handleRotation} 
             style={{ 
@@ -130,23 +130,24 @@ const callLink = `${callURL}${setCell}`;
               </svg>
             </div>
           </div>
-          <div className="img">
-            <div id="nameTitle">{title}</div>
-            <div className="imgcontainer">
+          <div className={styles.img}>
+            <div className={styles.titlecontainer}>
+            <div className={styles.nameTitle}>{title}</div></div>
+            <div className={styles.imgcontainer}>
               <img
-                id="profileImg"
+                className={styles.profileImg}
                 src={img}
                 alt="image"
               />
             </div>
           </div>
-          <div className="name">{name}</div>
-          <div className="username">{username}</div>
+          <div className={styles.name}>{name}</div>
+          <div className={styles.username}>{username}</div>
           <hr />
-          <div className="contact">
+          <div className={styles.contact}>
             <a target="_blank" href={mapLink} rel="noopener noreferrer">
-            <div className="loc">
-              <div className="maplogo">
+            <div className={styles.loc}>
+              <div className={styles.maplogo}>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   className="icon icon-tabler icon-tabler-map-pin-filled"
@@ -167,11 +168,11 @@ const callLink = `${callURL}${setCell}`;
                   />
                 </svg>
               </div>
-              <div className="location">Location</div>
+              <div className={styles.location}>Location</div>
             </div></a>
             <a target="_blank" href={callLink} rel="noopener noreferrer">
-            <div className="call">
-              <div className="callLogo">
+            <div className={styles.call}>
+              <div className={styles.callLogo}>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   className="icon icon-tabler icon-tabler-phone"
@@ -190,46 +191,49 @@ const callLink = `${callURL}${setCell}`;
                   />
                 </svg>
               </div>
-              <div className="callme">Call Me</div>
+              <div className={styles.callme}>Call Me</div>
             </div>
           </a>
           </div>
           <hr />
-          <div className="info">
-            <div className="cityDiv">
-              <div id="infoTitle">City</div>
-              <div id="content">{city}</div>
+          <div className={styles.info}>
+            <div className={styles.cityDiv}>
+              <div className={styles.infoTitle}>City</div>
+              <div className={styles.cityContainer}>
+              <div className={styles.content}>{city}</div>
+            </div></div>
+            <div className={styles.nationDiv}>
+              <div className={styles.infoTitle}>Nationality</div>
+              <div className={styles.content}> <CountryFlag countryCode={nation} /> {nation}</div>
             </div>
-            <div className="nationDiv">
-              <div id="infoTitle">Nationality</div>
-              <div id="content"> <CountryFlag countryCode={nation} /> {nation}</div>
+            <div className={styles.DOBDiv}>
+              <div className={styles.infoTitle}>Date of birth</div>
+              <div className={styles.content}>{dob}</div>
             </div>
-            <div className="DOBDiv">
-              <div id="infoTitle">Date of birth</div>
-              <div id="content">{dob}</div>
+            <div className={styles.phoneDiv}>
+              <div className={styles.infoTitle}>Phone No.</div>
+              <div className={styles.content}>{phone}</div>
             </div>
-            <div className="phoneDiv">
-              <div id="infoTitle">Phone No.</div>
-              <div id="content">{phone}</div>
-            </div>
-            <div className="zoneDiv">
-              <div id="infoTitle">Time Zone</div>
-              <div id="content">{timezone} ({timezoneCity})</div>
-            </div>
-            <div className="registerDiv">
-              <div id="infoTitle">Registered Since</div>
-              <div id="content">{registered}</div>
+            <div className={styles.zoneDiv}>
+              <div className={styles.infoTitle}>Time Zone</div>
+              <div className={styles.TZcontainer}>
+              <div className={styles.content}>{timezone} ({timezoneCity})</div>
+            </div></div>
+            <div className={styles.registerDiv}>
+              <div className={styles.infoTitle}>Registered Since</div>
+              <div className={styles.content}>{registered}</div>
             </div>
           </div>
-          <div className="chai">
+          <div className={styles.footerContainer}>
+          
+            <div className={styles.footer}>&copy; chai aur code</div>
+            <div id="chai">
             <a target="_blank" href="https://chaicode.com"><img
-              id="chaiCode"
+              className={styles.chaiCode}
               src="https://s3-alpha-sig.figma.com/img/6dbf/e4f9/9eddf1549be82b67d870f4041b254cab?Expires=1724630400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=I~hENpWCNY3kb~sXvHQg7uae8G-s~6A9TGLruWNZKOzNvUzveOIGAiFJGEx8Jly2kp1ReBZPy6IZcDu1JYHsrVMvKqaUlUZKlKDp92kjG8BD8Q4nYY9Y9jB6qXSgnP-HHKnn-d8KMx0AtTjTKalRKfcXZL-5b6vfHNpbhP7g-IHOo6tOMm7xxOg5QSfWxhP7QjegE2ROXUso618crIUeaPa5naFHSgRTaa3fGO5VW7x--RvX7EO7guhQa3UrZZcKnQTJnSk4iwUr8YG3nMFBvwu4~dEVjj~hu-e0Kal8oIcbHpIbiXzFHloOyQFn8QVdjx5jgI1T9X9weXWt~csZww__"
               alt="ChaiAurCodeLogo"
             /></a>
           </div>
-          <div id="footerContainer">
-            <div id="footer">&copy; chai aur code</div>
           </div>
         </div>
       </div>

@@ -11,11 +11,12 @@
   overflow: hidden;
 }
 .card {
-  width: 320px;
-  height: 550px;
+  width: 360px;
+  height: auto;
   background-color: #e5b7e4;
   border: 6px solid white;
   border-radius: 15px;
+  overflow: hidden;
 }
 .header {
   font-family: "Libre Caslon Text", serif;
@@ -27,14 +28,21 @@
   margin: 0 14px;
   /* background-color: aqua; */
 }
+.titlecontainer {
+  width: 100%;
+  /* background-color: aqua; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
-#nameTitle {
+.nameTitle {
   padding-left: 6px;
   padding-top: 2px;
   width: 26px;
   height: 16px;
   position: relative;
-  left: 182px;
+  left: 52px;
   font-size: 10px;
   color: white;
   background-color: black;
@@ -46,7 +54,7 @@
   align-items: center;
   /* background-color: aliceblue; */
 }
-#profileImg {
+.profileImg {
   height: 80px;
   width: 80px;
   border-radius: 50px;
@@ -105,17 +113,19 @@ hr {
   flex-direction: row;
   /* gap: 1px; */
 }
-#infoTitle {
+.infoTitle {
   font-family: sans-serif;
   font-size: 9px;
   font-size: 10px;
   color: rgba(0, 0, 0, 0.7);
 }
-#content {
+.content {
   font-family: "Libre Caslon Text", serif;
   font-weight: 400;
   font-size: 18px;
   color: rgba(0, 0, 0, 0.7);
+  margin-top: 4px;
+
 }
 .cityDiv,
 .nationDiv,
@@ -124,31 +134,34 @@ hr {
 .zoneDiv,
 .registerDiv {
   width: 50%;
-  height: 50px;
-  /* margin: 0px; */
-  /* background-color: aqua; */
+  margin-top: 6px;
 }
-.chai {
+.cityContainer {
   display: flex;
-  justify-content: flex-end;
-  margin: 10px;
 }
-#chaiCode {
+.TZcontainer {
+  width: 150px;
+  /* background-color: aqua; */
+  display: flex;
+}
+.footerContainer {
+  width: 100%;
+  /* background-color: aqua; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 14px;
+}
+.chaiCode {
+  /* background-color: aqua; */
   width: 50px;
   height: 50px;
-  border-radius: 10px;
+  border-radius: 10px; 
+  margin-right: 10px;
+  margin-bottom: 6px;
 }
-#footerContainer {
-  display: flex;
+.footer {
   /* background-color: aqua; */
-  height: 20px;
-  width: 200px;
-  justify-content: center;
-  align-items: center;
-}
-#footer {
-  margin-left: 90px;
-  margin-bottom: 40px;
-  color: white;
-  font-size: 10px;
+  margin-left: 120px;
+  color: rgb(172, 160, 160, 0.945);
 }
