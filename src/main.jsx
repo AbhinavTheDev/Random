@@ -4,6 +4,7 @@ import { Route, RouterProvider, createBrowserRouter, createRoutesFromElements } 
 import App from './App.jsx';
 import RandomUser from "./pages/User/RandomUser.jsx";
 import RandomJokes from "./pages/Jokes/RandomJokes.jsx";
+import CatsListings from "./pages/Cats/CatsListings.jsx";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -11,6 +12,7 @@ const router = createBrowserRouter(
       <Route path='' element={<RandomUser />} />
       <Route path='/random-user' element={<RandomUser />} />
       <Route path='/random-jokes' element={<RandomJokes />} />
+      <Route path='/cats-listings' element={<CatsListings />} />
   </Route>
   )
 )
